@@ -1,0 +1,22 @@
+<label>Server name</label>
+<!--<input type="text" name="txtName" id="txtName" class="form-control"
+ (input)="onUpdateServerName($event)" style="color: cyan">--> <!--1 WAY DATA Binding-->
+
+<!--<input type="text" class="form-control"
+       [(ngModel)]="userName">
+<button class = "btn btn-primary" (click)="userName = ''"
+        [disabled]="userName === ''">Reset</button>--> <!--Exercise-->
+
+<input type="text" class="form-control"
+       [(ngModel)]="serverName"> <!--2 WAY DATA Binding-->
+
+<button class = "btn btn-primary"
+        [disabled]="!allowNewServer"
+    (click)="onCreateServer()">Add server</button>
+
+<p *ngIf="serverCreated">Server is created. Server name is {{ serverName }}</p>
+<!--<p> {{ serverCreationStatus }} </p>-->
+<!--<p [innerText]="allowNewServer"></p>-->
+<!--<p [innerText]="serverCreationStatus"></p>-->
+<!--<p> {{ serverName }} </p>-->
+<app-server></app-server>
