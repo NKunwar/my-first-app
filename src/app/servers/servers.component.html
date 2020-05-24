@@ -26,4 +26,4 @@
 <!--<p [innerText]="serverCreationStatus"></p>-->
 <!--<p> {{ serverName }} </p>-->
 
-<app-server></app-server> <!-- Component server is called here -->
+<app-server *ngFor="let server of serversArr"></app-server> <!-- Component server is called here -->
